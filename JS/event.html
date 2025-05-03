@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .counter-app {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+      }
+
+      #count {
+        font-size: 40px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="counter-app">
+      <h1>Counter App</h1>
+      <h2 id="count">0</h2>
+      <div class="counter">
+        <button id="decrement" >➖Decrement</button>
+        <button id="reset">Reset</button>
+        <button id="increment">➕Increment</button>
+      </div>
+    </main>
+    <script>
+      const doc = document;
+      const increment = () => {
+        const count = document.getElementById("count");
+        let currentCount = parseInt(count.innerText);
+        count.innerText = currentCount + 1;
+      };
+
+      function decrement() {
+        const count = document.getElementById("count");
+        let currentCount = parseInt(count.innerText);
+
+        if (currentCount > 0) {
+          count.innerText = currentCount - 1;
+        } else {
+          alert("Counter cannot be less than 0");
+        }
+      }
+
+      function reset() {
+        const count = document.getElementById("count");
+        count.innerText = 0;
+      }
+
+      doc.querySelector("#increment").addEventListener("click", increment);
+      doc.querySelector("#decrement").addEventListener("click", decrement);
+      doc.querySelector("#reset").addEventListener("click", reset);
+    </script>
+  </body>
+</html>

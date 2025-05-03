@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Student {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+
+        getObj() {
+          return this;
+        }
+
+        setName(name) {
+          this.name = name;
+        }
+      }
+
+      const obj1 = new Student("John", 25);
+
+      console.log(obj1.name);
+      console.log(obj1.age);
+
+      obj1.setName("Doe");
+
+      console.log(obj1.getObj());
+    </script>
+  </body>
+</html>

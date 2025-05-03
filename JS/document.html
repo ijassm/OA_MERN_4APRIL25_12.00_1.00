@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin-block: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello JS</h1>
+    <h1>Hello JS</h1>
+    <h1>Hello JS</h1>
+    <h1>dfg JS</h1>
+    <p class="title">Hello JS</p>
+    <p id="title">Hello JS</p>
+    <input type="text" name="username" />
+    <script>
+      const doc = document;
+
+      console.log(doc);
+      // console.log(doc.head);
+      // console.log(doc.body);
+      // const h1 = doc.getElementsByTagName("h1");
+      // const title = doc.getElementsByClassName("title");
+      // const titleById = doc.getElementById("title");
+      // const usernameByName = doc.getElementsByName("username");
+      // console.log(title);
+      // // console.log(titleById);
+      // console.log(usernameByName);
+
+      const h1 = doc.querySelector("h1");
+      h1.style.color = "red";
+      h1.style.backgroundColor = "black";
+      h1.style.fontSize = "50px";
+      // const h1 = doc.querySelectorAll("h1");
+
+      // console.log(h1);
+
+      // create element
+      const div = doc.createElement("div");
+      div.className = "box";
+
+      // console.log(div);
+      doc.body.appendChild(div);
+    </script>
+  </body>
+</html>

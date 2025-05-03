@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const data = [
+      //     { name: "John", age: 30 },
+      //     { name: "Jane", age: 25 },
+      //     { name: "Doe", age: 40 },
+      //   ];
+
+      //   const result = data.map((item) => item.name);
+      //   console.log(result); // ["John", "Jane", "Doe"]
+
+      function outer() {
+        return function inner() {
+          console.log("Hello from the inner function!");
+        };
+      }
+
+      //   console.log(outer());
+      //   const innerFunc = outer();
+
+      //   console.log(innerFunc);
+      //   innerFunc();
+
+      //   const id1 = setTimeout(() => {
+      //     console.log("Hello from the setTimeout function!");
+      //   }, 1000);
+
+      //   const id2 = setTimeout(() => {
+      //     console.log("Hello from the setTimeout function!");
+      //   }, 0);
+
+      //   clearTimeout(id1);
+
+      //   console.log(id1);
+      //   console.log(id2);
+      //   let count = 1;
+
+      //   setInterval(() => {
+      //     const date = new Date();
+      //     console.log(date.toLocaleTimeString());
+      //     document.body.innerHTML = date.toLocaleTimeString();
+      //     // console.log("Hello from the setInterval function!", count++);
+      //   }, 1000);
+    </script>
+  </body>
+</html>

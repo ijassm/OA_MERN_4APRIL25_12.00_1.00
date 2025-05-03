@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const obj1 = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 30,
+      };
+
+      const obj2 = {
+        firstName: "Jane",
+        lastName: "Smith",
+        age: 25,
+      };
+
+      const obj3 = {
+        firstName: "Alice",
+        lastName: "Johnson",
+        age: 28,
+      };
+
+      function getFullName(thirdName) {
+        console.log(this);
+        console.log(thirdName);
+
+        // 'this' refers to the object itself
+        return `${this.firstName} ${this.lastName} ${thirdName}`;
+      }
+
+      //   console.log(getFullName());
+      //   console.log(getFullName.call(obj1, "someName"));
+      //   console.log(getFullName.call(obj2, "testName"));
+      //   console.log(getFullName.call(obj3, "anotherName"));
+
+      //   console.log(getFullName.apply(obj1, ["someName"]));
+      //   console.log(getFullName.apply(obj2, ["testName"]));
+      //   console.log(getFullName.apply(obj3, ["anotherName"]));
+
+      const boundFunc = getFullName.bind(obj1, "someName");
+
+      console.log(boundFunc());
+
+      //   console.log(obj1.getFullName());
+      //   console.log(obj2.getFullName());
+      //   console.log(obj3.getFullName());
+    </script>
+  </body>
+</html>
